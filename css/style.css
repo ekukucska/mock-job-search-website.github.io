@@ -1,0 +1,376 @@
+/*  start reset */
+html {
+	font-size: 16px;
+}
+@media (max-width: 1024px) {
+	html {
+		font-size: 15px;
+	}
+}
+@media (max-width: 767px) {
+	html {
+		font-size: 14px;
+	}
+}
+a,
+a:hover,
+a:active,
+a:visited {
+	box-shadow: none;
+	outline: none;
+	border: none;
+	text-decoration: none;
+}
+ul, 
+ol {
+	list-style: none;
+}
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+*:focus {
+  box-shadow: none;
+  outline: none;
+}
+/* end - reset */
+/* for fixed elements - e.g. footer, UP button... */
+body {
+	position: relative;
+/*	padding-top: 10rem;*/
+	padding-bottom: 10rem;
+	background-color: #efefef;
+	min-height: 100vh;
+}
+/* end - body positioning for fixed elements */
+/* fix for extra white space on right side of header, due to extra padding from .navbar-expand-sm */
+html, body { 
+	overflow-x: hidden; 
+}
+/* end - fix for extra white space. of header... */
+/* UP button big */
+div.button-up-big a {
+	position: fixed;
+	z-index: 9999;
+	right: 0.7rem;
+	bottom: 4rem;
+	width: auto;
+	height: auto;
+	border: 1px solid #52adca;
+	border-radius: 50px;
+	background-color: #52adca;
+	color: #ffffff;
+	padding: 0.3rem 1.3rem 0.3rem 1.3rem;
+	font-size: 1.2rem;
+	font-weight: bold;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+div.button-up-big a:hover {
+	background-color: #2b748b; 
+	color: white;
+	border: 1px solid #2b748b;
+}
+div.button-up-big a:visited,
+div.button-up-big a:active,
+div.button-up-big a:focus {
+	outline: none;
+	text-decoration: none;
+}
+@media (max-width: 767px) {
+	div.button-up-big {
+		display: none;
+	}
+}
+/* end - UP button big*/
+/* UP button small */
+div.button-up-small a {
+	position: fixed;
+	z-index: 9999;
+	bottom: 4rem;
+	right: .7rem;
+	color: #52adca;
+	font-size: 2.5rem;
+}
+div.button-up-small a:visited,
+div.button-up-small a:active,
+div.button-up-small a:focus {
+	outline: none;
+	text-decoration: none;
+}
+@media (min-width: 768px) {
+	div.button-up-small {
+		display: none;
+	}
+}
+/* end - UP button small*/
+/* header*/
+header {
+	background-color: black;
+	color: white;
+	min-width: 100vw;
+}
+/* end - header */
+/* navbar1 */
+.logo {
+	font-family: 'Merienda', cursive;
+}
+.logo-web {
+	font-size: 2rem;
+	color:lightblue;
+}
+.logo-folio {
+	font-size: 1.5rem;
+	color: white;
+}
+.navbar a {
+	color: white;
+}
+.login:hover {
+	color: #bfc4cc;
+}
+/* end - navbar1*/
+/* login modal */
+.btn-dark {
+	background-color: black;
+	border-color: black;
+}
+.btn-dark:hover {
+	background-color: #666;
+	box-shadow: none;
+}
+.btn-primary {
+	background-color: black;
+	border-color: black;
+}
+.btn-primary:hover {
+	background-color: #666;
+	border-color: black;
+}
+.form-control:active {
+	border-color: none;
+}
+.form-control:focus {
+	border-color: none;
+}
+.modal-header {
+	display: block;
+	text-align: right;
+}
+/* end - login modal */
+/* navbar2 */
+.nav-item {
+	padding: 0 1rem 0 1rem;
+	font-size: 1.25rem;
+	border-radius: 0.25rem;
+}
+.nav-item:hover {
+	background-color: #666;
+}
+/* end - navbar2 */
+/* portfolio cards gallery with filter*/
+body {
+    background-color: #f1f1f1;
+ /*   padding: 20px;*/
+    font-family: Arial;
+}
+.page-title {
+	color: 	#52adca;
+	font-weight: bolder;
+	font-family: 'Merienda', cursive;
+	font-size: 3.5vw;
+	word-break: keep-all;
+}
+@media screen and (min-width: 1200px) {
+  	.page-title {
+    font-size: 36px;
+  }
+}
+@media (max-width: 767px) {
+	.page-title {
+		display: none;
+	}
+}
+.filter-text {
+	color: #666;
+	margin-top: .5rem;
+}
+/* filter buttons */
+.btn {
+	margin-top: .5rem;
+	}
+/* Center website */
+.main {
+    max-width: 1000px;
+    margin: auto;
+}
+h1 {
+    font-size: 50px;
+    word-break: break-all;
+}
+.row {
+    margin: 10px -16px;
+}
+/* column padding */
+.row,
+.row > .column {
+    padding: 8px;
+}
+/* floated & responsive columns  */
+.column {
+    float: left;  
+    width: 25%;
+    display: none; /* hides all elements by default */
+}
+@media only screen and (max-width: 1040px) {
+    .column {
+        float: left;
+        width: 33.33%;
+        display: none; /* hides all elements by default */
+    }
+}   
+@media only screen and (max-width: 992px) {
+.column {
+    float: left;
+    width: 50%;
+    display: none; /* hides all elements by default */
+    }
+}
+@media only screen and (max-width: 767px) {
+.column {
+    float: left;
+    width: 100%;
+    display: none; /* hides all elements by default */
+    }
+}
+/* content */
+.content {
+    background-color: white;
+    padding: 10px;
+}
+/* "show" class for the filtered elements */
+.show {
+  display: block;
+}
+/* buttons styles */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #ddd;
+}
+header .btn:hover {
+  background-color: #666;
+}
+.btn:active {
+  background-color: #666;
+  color: white;
+}
+.btn:focus {
+  background-color: #666;
+  color: white;
+}
+/* end - portfolio cards gallery with filter */
+
+/* to make header & modal buttons black again */
+header .btn {
+	background-color: black;
+}
+/* to avoid getting background color changed from the formatting of the filter buttons */
+header .btn:focus {
+	  background-color: black;
+  color: white;
+}
+/* box shadow */
+.box-shadow {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+#myBtnContainer .btn {
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+/* greyscale effect - for content cards */
+/* greyscale effect on hover over - for tablets and above (768px and wider) */
+@media (min-width: 768px) {
+	.column .content:hover {
+		background-color: #ddd;
+		filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
+	    filter: gray; /* IE5+ */
+	    -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
+	}
+	.column .content a:hover {
+		color: black;
+	}
+}
+/* greyscale effect on active - for smartphones (max. 767px wide) */
+@media (max-width: 767px) {
+ 	.column .content:active {
+	background-color: #ddd;
+	filter: url(filters.svg#grayscale); Firefox 3.5+
+    filter: gray; IE5+
+    -webkit-filter: grayscale(1); Webkit Nightlies & Chrome Canary
+}
+	.column .content a:active {
+		color: black;
+	}
+} 
+/* end - greyscale effect - for content cards */
+/* font */
+.font-dosis {
+	font-family: 'Lato', sans-serif;
+}
+h5, .h5 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+/* font */
+/* footer */
+body {
+   min-height: 100vh;
+   position: relative;
+}
+.footer {
+   /* height: 3rem; *//* .push must be the same height as .footer */  
+  	padding-top: .5rem;
+  	background-color: black;
+	color: white;
+}
+.social-media-icons:hover,
+.social-media-icons:focus,
+.social-media-icons:active {
+	color: #666;
+}
+.footer-copyright {
+	font-size: .8rem;
+}
+@media (max-width: 767px) {
+	.footer-social-media {
+		text-align: center;
+	}
+	.footer-copyright {
+		text-align: center;
+		margin-left: ($spacer * 3);
+	}
+}
+/* end footer */
+/* dropdown for navigation menu / navbar2 */
+.dropdown-toggle::after {
+    display:none;
+}
+.dropdown-menu {
+	background-color: #666;
+}
+.navbar .dropdown-menu a {
+	color: white;
+	padding-left: 1rem;
+	padding-top: 1rem;
+}
+.navbar .dropdown-menu a:hover {
+	color: black;
+	font-weight: bolder;
+}
+/* end - dropdown for navigation menu / navbar2 */

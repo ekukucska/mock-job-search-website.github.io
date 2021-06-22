@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>WEBfolio</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="img/source-code-icon-32-213242.png" sizes="32x32">
+        <link href="https://fonts.googleapis.com/css?family=Merienda:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+<!-- header -->
+        <header>
+<!-- navbar1 -->
+            <nav class="navbar container">
+                <a href="index.html" class="navbar-brand logo">
+                    <span class="logo logo-web">WEB</span>
+                    <span class="logo logo-folio">folio</span>
+                </a>
+<!-- login modal -->
+              <button type='button' class="btn btn-dark" data-toggle="modal" data-target="#popUpWindow">Log In</button>      
+                  <div class="modal fade" id="popUpWindow">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <!-- modal header -->
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h3 class="modal-title">Login Form</h3>
+                        </div>
+                        <!-- modal body -->
+                        <div class="modal-header">
+                          <form role="form">
+                            <div class="form-group">
+                              <input type="email" class="form-control mt-1" placeholder="Email"/>
+                              <input type="password" class="form-control mt-1" placeholder="Password" />
+                            </div>
+                          </form>
+                        </div>
+                        <!-- modal footer -->
+                        <div class="modal-footer">
+                          <button class="btn btn-primary btn-block">Log In</button>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+<!-- end - login modal -->
+            </nav>
+<!-- end - navbar1 -->
+<!-- navbar2 -->
+            <!-- horizontal navbar that becomes vertical on small screens -->
+            <nav class="navbar navbar-expand-sm container navbar3 justify-content-center">
+              <!-- links -->
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Web Designers</a>
+                    <!-- dropdown menu for "Web Designers" -->
+                    <ul class="dropdown-menu">
+                        <li><a href="#">HTML</a></li>
+                        <li><a href="#">CSS</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">PHP</a></li>
+                    </ul> 
+                    <!-- end - dropdown menu for "Web Designers" -->
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Web Design Jobs</a>
+                        <!-- dropdown menu for "Web Design Jobs" -->
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Employement</a></li>
+                            <li><a href="#">Freelancing</a></li>
+                        </ul> 
+                    <!-- end - dropdown menu for "Web Design Jobs" -->
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact</a>
+                </li>
+              </ul>
+            </nav>
+<!-- end - navbar2 -->
+        </header>
+<!-- end - header -->
+<!-- portfolio cards gallery with filter -->
+<!-- main container div -->
+        <div class="main"> <!-- !!replace class "main" with "container-fluid" to make it screen wide -->
+            <!-- text area -->
+            <div class="container font-lato text-center mt-4">
+                <h1 class="page-title">Find the right web developer!</h1>
+                <h2 class="filter-text">Refine your search criteria:</h2>
+            </div>
+            <!-- filter buttons area -->
+            <div id="myBtnContainer" class="text-center mt-4 filter-buttons">
+                <button class="btn ml-2 active" onclick="filterSelection('all')"> Show all</button>
+                <button class="btn ml-2" onclick="filterSelection('front-end')"> Front End</button>
+                <button class="btn ml-2" onclick="filterSelection('back-end')"> Back End</button>
+                <button class="btn ml-2" onclick="filterSelection('full-stack')"> Full Stack</button>
+            </div>
+<!-- portfolio gallery grid -->
+            <div class="row mt-4"> <!-- to keep the galery grid cards centered  -->
+                <!-- card#1 -->
+                <div class="column front-end">
+                    <div class="content box-shadow">
+                        <h5 class="card-title">Web Designer</h5>
+                        <p class="card-text">Lorem ipsum dolor..</p>
+                        <img src="img/card-img1.jpg" alt="Web Designer" style="width:100%" class=".card-img-top">
+                        <div class="text-center mt-1">
+                            <a href="#" class="card-link"><i class="fa fa-question-circle"></i> Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- card#2 -->
+                <div class="column front-end">
+                    <div class="content box-shadow">
+                        <h5 class="card-title">Front End Dev</h5>
+                        <p class="card-text">Lorem ipsum dolor..</p>
+                        <img src="img/card-img2.jpg" alt="Front End Dev" style="width:100%" class=".card-img-top">
+                        <div class="text-center mt-1">
+                            <a href="#" class="card-link"><i class="fa fa-question-circle"></i> Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- card#3 -->
+                <div class="column back-end">
+                    <div class="content box-shadow">
+                        <h5 class="card-title">PHP Dev</h5>
+                        <p class="card-text">Lorem ipsum dolor..</p>
+                        <img src="img/card-img3.jpg" alt="PHP Dev" style="width:100%" class=".card-img-top">
+                        <div class="text-center mt-1">
+                            <a href="#" class="card-link"><i class="fa fa-question-circle"></i> Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- card#4 -->
+                <div class="column front-end">
+                    <div class="content box-shadow">
+                        <h5 class="card-title">JS Dev</h5>
+                        <p class="card-text">Lorem ipsum dolor..</p>
+                        <img src="img/card-img4.jpg" alt="JS Dev" style="width:100%" class=".card-img-top">
+                        <div class="text-center mt-1">
+                            <a href="#" class="card-link"><i class="fa fa-question-circle"></i> Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- card#5 -->
+                <div class="column full-stack">
+                    <div class="content box-shadow">
+                        <h5 class="card-title">Web Dev</h5>
+                        <p class="card-text">Lorem ipsum dolor..</p>
+                        <img src="img/card-img5.jpg" alt="Web Dev" style="width:100%" class=".card-img-top">
+                        <div class="text-center mt-1">
+                            <a href="#" class="card-link"><i class="fa fa-question-circle"></i> Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- card#6 -->
+                <div class="column back-end">
+                    <div class="content box-shadow">
+                        <h5 class="card-title">Ruby Dev</h5>
+                        <p class="card-text">Lorem ipsum dolor..</p>
+                        <img src="img/card-img6.jpg" alt="Ruby Dev" style="width:100%" class=".card-img-top">
+                        <div class="text-center mt-1">
+                            <a href="#" class="card-link"><i class="fa fa-question-circle"></i> Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- card#7 -->
+                <div class="column full-stack">
+                    <div class="content box-shadow">
+                        <h5 class="card-title">Web Dev</h5>
+                        <p class="card-text">Lorem ipsum dolor..</p>
+                        <img src="img/card-img7.jpg" alt="Web Dev" style="width:100%" class=".card-img-top">
+                        <div class="text-center mt-1">
+                            <a href="#" class="card-link"><i class="fa fa-question-circle"></i> Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- card#8 -->
+                <div class="column front-end">
+                    <div class="content box-shadow">
+                        <h5 class="card-title">Web Designer</h5>
+                        <p class="card-text">Lorem ipsum dolor..</p>
+                        <img src="img/card-img8.jpg" alt="Web Designer" style="width:100%" class=".card-img-top">
+                        <div class="text-center mt-1">
+                            <a href="#" class="card-link"><i class="fa fa-question-circle"></i> Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- card#9 -->
+                <div class="column back-end">
+                    <div class="content box-shadow">
+                        <h5 class="card-title">Drupal Specialist</h5>
+                        <p class="card-text">Lorem ipsum dolor..</p>
+                        <img src="img/card-img9.jpg" alt="Drupal Specialist" style="width:100%" class=".card-img-top">
+                        <div class="text-center mt-1">
+                            <a href="#" class="card-link"><i class="fa fa-question-circle"></i> Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- card#10 -->
+                <div class="column front-end">
+                    <div class="content box-shadow">
+                        <h5 class="card-title">Web Dev</h5>
+                        <p class="card-text">Lorem ipsum dolor..</p>
+                        <img src="img/card-img10.jpg" alt="Web Dev" style="width:100%" class=".card-img-top">
+                        <div class="text-center mt-1">
+                            <a href="#" class="card-link"><i class="fa fa-question-circle"></i> Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- card#11 -->
+                <div class="column full-stack">
+                    <div class="content box-shadow">
+                        <h5 class="card-title">Web Dev</h5>
+                        <p class="card-text">Lorem ipsum dolor..</p>
+                        <img src="img/card-img11.jpg" alt="Web Dev" style="width:100%" class=".card-img-top">
+                        <div class="text-center mt-1">
+                            <a href="#" class="card-link"><i class="fa fa-question-circle"></i> Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- card#12 -->
+                <div class="column full-stack">
+                    <div class="content box-shadow">
+                        <h5 class="card-title">Web Dev</h5>
+                        <p class="card-text">Lorem ipsum dolor..</p>
+                        <img src="img/card-img12.jpg" alt="Web Dev" style="width:100%" class=".card-img-top">
+                        <div class="text-center mt-1">
+                            <a href="#" class="card-link"><i class="fa fa-question-circle"></i> Details</a>
+                        </div>
+                    </div>
+                </div>
+            <!-- end - portfolio gallery grid -->
+            </div> <!-- end row -->
+        <!-- end - main container -->
+        </div>
+<!-- end - portfolio cards gallery with filter -->
+<!-- UP button big-->
+        <div class="button-up-big text-center">
+            <a href="#">
+                <i class="fa fa-arrow-circle-up"></i>
+                <p>TOP</p>
+            </a>
+        </div>
+<!-- end - UP button big -->
+<!-- UP button small -->
+        <div class="button-up-small align-items-center">
+            <a href="#">
+                <i class="fa fa-chevron-circle-up"></i>
+            </a>
+        </div>
+<!-- end - UP button small -->
+<!-- footer -->
+        <nav class="navbar navbar-expand-sm  fixed-bottom text-white footer">
+            <div class="container">
+                <div class="footer-social-media">
+                    <a href="https://www.linkedin.com/" target="_blank" class="social-media-icons ml-5">
+                        <i class="fa fa-linkedin"></i>
+                    </a> 
+                    <a href="https://www.facebook.com/" target="_blank" class="social-media-icons ml-5">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="social-media-icons ml-5">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="social-media-icons ml-5">
+                        <i class="fa fa-instagram"></i>
+                    </a>      
+                </div>
+                <div class="footer-copyright ml-5">
+                    <span class="text-muted">Copyright WEBfolio (c) 2018</span>
+                </div>
+            </div>
+        </nav>
+<!-- end - footer -->
+<!-- javascript -->
+<!-- js libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<!-- js files-->
+        <script src="js/bootstrap.js"></script>
+<!-- js functions -->
+        <!-- portfolio cards gallery with filter -->
+        <script>
+            filterSelection("all")
+            function filterSelection(c) {
+              var x, i;
+              x = document.getElementsByClassName("column");
+              if (c == "all") c = "";
+              for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+              }
+            }
+            function w3AddClass(element, name) {
+              var i, arr1, arr2;
+              arr1 = element.className.split(" ");
+              arr2 = name.split(" ");
+              for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+              }
+            }
+            function w3RemoveClass(element, name) {
+              var i, arr1, arr2;
+              arr1 = element.className.split(" ");
+              arr2 = name.split(" ");
+              for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                  arr1.splice(arr1.indexOf(arr2[i]), 1);     
+                }
+              }
+              element.className = arr1.join(" ");
+            }
+            // adds active class to the current button (+highlights it)
+            var btnContainer = document.getElementById("myBtnContainer");
+            var btns = btnContainer.getElementsByClassName("btn");
+            for (var i = 0; i < btns.length; i++) {
+              btns[i].addEventListener("click", function(){
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+              });
+            }
+/* end - portfolio cards gallery with filter */
+        </script>
+    </body>
+</html>
